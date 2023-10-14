@@ -1,10 +1,4 @@
-# Probabilidad
-Rebeca Espinosa Roque, 320326387
-Ejercicio 3 de probabilidad, de la tarea 07
-
-NOTA: Para poder correr el programa deberás tener intalada una versión reciente de Python y las librerías necesarías: Matplotlib y Scipy.
-
-d) ¿Que puedes observar de las graficas del inciso b) y del inciso c)?
+# d) ¿Que puedes observar de las graficas del inciso b) y del inciso c)?
 
 Las gráficas representan a distribución de probabilidad de la variable aleatoria Y, que se obtiene a partir de una transformación de la 
 variable aleatoria X, y la distribución de probabilidad de la variable aleatoria Z, que sigue una distribución normal estándar. 
