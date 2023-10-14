@@ -1,0 +1,47 @@
+# Importar las bibliotecas necesarias
+import matplotlib.pyplot as plt
+import numpy as np
+from scipy.stats import binom, norm
+
+# Parámetros para la distribución binomial
+n = 1000  # Número de ensayos
+p = 0.3   # Probabilidad de éxito en cada ensayo
+
+# Crear un arreglo de valores de X para la distribución binomial
+x = np.arange(0, n+1)
+
+# Calcular la función de masa de probabilidad (PMF) para la distribución binomial
+binomial_pmf = binom.pmf(x, n, p)
+
+# Crear un gráfico de tallo y hojas para la distribución binomial
+plt.figure(figsize=(10, 6))
+plt.stem(x, binomial_pmf, markerfmt='.', linefmt='blue', basefmt=" ")
+plt.title('PMF de X ~ Binomial(1000, 0.3)')
+plt.xlabel('X')
+plt.ylabel('Probabilidad')
+plt.show()
+
+# Transformar X a Y usando una transformación lineal
+y = (x - 300) / np.sqrt(210)
+
+# Crear un gráfico de tallo y hojas para la distribución de Y
+plt.figure(figsize=(10, 6))
+plt.stem(y, binomial_pmf, markerfmt='.', linefmt='blue', basefmt=" ")
+plt.title('PMF de Y = (X - 300) / sqrt(210)')
+plt.xlabel('Y')
+plt.ylabel('Probabilidad')
+plt.show()
+
+# Crear un arreglo de valores de Z para la distribución normal
+z = np.linspace(-5, 5, 1000)
+
+# Calcular la función de densidad de probabilidad (PDF) para la distribución normal
+normal_pmf = norm.pdf(z, 0, 1)
+
+# Crear un gráfico de la función de densidad de probabilidad para la distribución normal
+plt.figure(figsize=(10, 6))
+plt.plot(z, normal_pmf)
+plt.title('PMF de Z ~ Normal(0, 1)')
+plt.xlabel('Z')
+plt.ylabel('Probabilidad')
+plt.show()
